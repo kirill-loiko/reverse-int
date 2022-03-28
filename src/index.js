@@ -3,13 +3,8 @@ module.exports = function reverse (n) {
         n = -n;
     }
 
-    let numberToString = String(n);
-    let i = numberToString.length - 1
-    let result = '';
-
-    while (i >= 0) {
-        result = result + numberToString[i];
-        i--;
+    for (var i = n.toString().length - 1, result = ''; i >= 0; i--) {
+        result = result + n.toString()[i];
     }
     return +result;
 }
